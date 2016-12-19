@@ -19,8 +19,8 @@ OPTS=(
 
   node_modules/zone.js/dist/zone.js
   $(find vendor/rxjs -name *.js)
-  node_modules/@angular/{core,common,compiler,platform-browser}/index.js
-  $(find node_modules/@angular/{core,common,compiler,platform-browser}/src -name *.js)
+  node_modules/@angular/{core,common,compiler,http,platform-browser}/index.js
+  $(find node_modules/@angular/{core,common,compiler,http,platform-browser}/src -name *.js)
   "built/*.js"
   "--entry_point=./built/bootstrap"
 )
