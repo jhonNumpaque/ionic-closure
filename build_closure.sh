@@ -21,6 +21,8 @@ OPTS=(
   $(find vendor/rxjs -name *.js)
   node_modules/@angular/{core,common,compiler,http,platform-browser}/index.js
   $(find node_modules/@angular/{core,common,compiler,http,platform-browser}/src -name *.js)
+  node_modules/ionic-angular/es2015/index.js
+  $(find node_modules/ionic-angular/es2015 -name *.js)
   "built/*.js"
   "--entry_point=./built/bootstrap"
 )
