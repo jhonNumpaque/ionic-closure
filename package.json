@@ -8,6 +8,7 @@
     "@angular/compiler": "alexeagle/compiler-builds",
     "@angular/compiler-cli": "alexeagle/compiler-cli-builds",
     "@angular/core": "alexeagle/core-builds",
+    "@angular/forms": "alexeagle/forms-builds",
     "@angular/http": "alexeagle/http-builds",
     "@angular/platform-browser": "alexeagle/platform-browser-builds",
     "@angular/platform-server": "alexeagle/platform-server-builds",
@@ -21,7 +22,8 @@
     "zone.js": "angular/zone.js#2594817"
   },
   "scripts": {
-    "build": "ngc && ./build_closure.sh",
+    "build": "npm run clean && ngc && ./build_closure.sh",
+    "clean": "rm -rf dist && rm -rf built && find src -name *.ngfactory* -delete && find src -name *.ngsummary* -delete",
     "explore": "source-map-explorer dist/bundle.js dist/bundle.js.map"
   },
   "author": "Alex Eagle <alexeagle@google.com> (https://angularjs.org/)",
