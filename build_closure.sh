@@ -24,7 +24,7 @@ OPTS=(
   node_modules/ionic-angular/es2015/index.js
   $(find node_modules/ionic-angular/es2015 -name *.js)
   "built/*.js"
-  "--entry_point=./built/bootstrap"
+  "--entry_point=./built/src/bootstrap.js"
 )
 
 set -ex
