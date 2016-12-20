@@ -12,6 +12,7 @@ OPTS=(
 
   # List of path prefixes to be removed from ES6 & CommonJS modules.
   "--js_module_root=node_modules"
+  "--js_module_root=built/node_modules"
   "--js_module_root=vendor"
 
   # Uncomment for easier debugging
@@ -20,11 +21,14 @@ OPTS=(
   node_modules/zone.js/dist/zone.js
   $(find vendor/rxjs -name *.js)
   node_modules/@angular/{core,common,compiler,forms,http,platform-browser}/index.js
+  # built/node_modules/@angular/{core,common,compiler,forms,http,platform-browser}/index.js
   $(find node_modules/@angular/{core,common,compiler,forms,http,platform-browser}/src -name *.js)
+  $(find built/node_modules/@angular/{core,common,compiler,forms,http,platform-browser}/src -name *.js)
   node_modules/ionic-angular/es2015/index.js
   $(find node_modules/ionic-angular/es2015 -name *.js)
-  "built/*.js"
-  "--entry_point=./built/src/bootstrap.js"
+  $(find built/node_modules/ionic-angular/es2015 -name *.js)
+  "built/src/*.js"
+  "--entry_point=./built/src/bootstrap"
 )
 
 set -ex
