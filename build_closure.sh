@@ -6,9 +6,9 @@ ZONE='node_modules/zone.js/dist/zone.js';
 echo ${ZONE}
 RJXS=$(find vendor/rxjs -name '*.js');
 echo ${RJXS} | tr " " "\n"
-ANGULAR_INDEX=$(find node_modules/@angular/{core,common,compiler,platform-browser}/index.js);
+ANGULAR_INDEX=$(find node_modules/@angular/{core,common,compiler,forms,http,platform-browser}/index.js);
 echo ${ANGULAR_INDEX} | tr " " "\n"
-ANGULAR_SRC=$(find node_modules/@angular/{core,common,compiler,platform-browser}/src -name '*.js')
+ANGULAR_SRC=$(find node_modules/@angular/{core,common,compiler,forms,http,platform-browser}/src -name '*.js')
 echo ${ANGULAR_SRC} | tr " " "\n"
 GENERATED_BY_NGC=$(find built -name '*.js');
 echo ${GENERATED_BY_NGC} | tr " " "\n"
