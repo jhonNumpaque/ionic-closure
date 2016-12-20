@@ -32,6 +32,7 @@ OPTS=(
 
   # List of path prefixes to be removed from ES6 & CommonJS modules.
   "--js_module_root=node_modules"
+  "--js_module_root=built/node_modules"
   "--js_module_root=vendor"
 
   # Uncomment for easier debugging
