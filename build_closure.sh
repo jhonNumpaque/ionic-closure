@@ -32,5 +32,5 @@ java -jar node_modules/google-closure-compiler/compiler.jar $(echo ${OPTS[*]})
 gzip --keep -f dist/bundle.js
 # requires brotli
 # on Mac: brew install brotli
-bro --force --quality 10 --input dist/bundle.js --output dist/bundle.js.brotli
+# bro --force --quality 10 --input dist/bundle.js --output dist/bundle.js.brotli
 ls -alH dist/bundle*
