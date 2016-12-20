@@ -1,3 +1,23 @@
+echo "####################"
+echo "####################"
+echo "####################"
+echo "Providing Closure with the following .js files"
+ZONE='node_modules/zone.js/dist/zone.js';
+echo ${ZONE}
+RJXS=$(find vendor/rxjs -name '*.js');
+echo ${RJXS} | tr " " "\n"
+ANGULAR_INDEX=$(find node_modules/@angular/{core,common,compiler,platform-browser}/index.js);
+echo ${ANGULAR_INDEX} | tr " " "\n"
+ANGULAR_SRC=$(find node_modules/@angular/{core,common,compiler,platform-browser}/src -name '*.js')
+echo ${ANGULAR_SRC} | tr " " "\n"
+GENERATED_BY_NGC=$(find built -name '*.js');
+echo ${GENERATED_BY_NGC} | tr " " "\n"
+IONIC_ANGULAR=$(find node_modules/ionic-angular/es2015 -name '*.js');
+echo ${IONIC_ANGULAR} | tr " " "\n"
+echo "####################"
+echo "####################"
+echo "####################"
+
 OPTS=(
   "--language_in=ES6_STRICT"
   "--language_out=ES5"
@@ -12,22 +32,17 @@ OPTS=(
 
   # List of path prefixes to be removed from ES6 & CommonJS modules.
   "--js_module_root=node_modules"
-  "--js_module_root=built/node_modules"
   "--js_module_root=vendor"
 
   # Uncomment for easier debugging
   # "--formatting=PRETTY_PRINT"
 
-  node_modules/zone.js/dist/zone.js
-  $(find vendor/rxjs -name *.js)
-  node_modules/@angular/{core,common,compiler,forms,http,platform-browser}/index.js
-  # built/node_modules/@angular/{core,common,compiler,forms,http,platform-browser}/index.js
-  $(find node_modules/@angular/{core,common,compiler,forms,http,platform-browser}/src -name *.js)
-  $(find built/node_modules/@angular/{core,common,compiler,forms,http,platform-browser}/src -name *.js)
-  node_modules/ionic-angular/es2015/index.js
-  $(find node_modules/ionic-angular/es2015 -name *.js)
-  $(find built/node_modules/ionic-angular/es2015 -name *.js)
-  "built/src/*.js"
+  ${ZONE}
+  ${RJXS}
+  ${ANGULAR_INDEX}
+  ${ANGULAR_SRC}
+  ${GENERATED_BY_NGC}
+  ${IONIC_ANGULAR}
   "--entry_point=./built/src/bootstrap"
 )
 
