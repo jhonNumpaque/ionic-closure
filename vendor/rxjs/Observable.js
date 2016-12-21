@@ -14,6 +14,7 @@ export class Observable {
      * @param {?=} subscribe
      */
     constructor(subscribe) {
+        console.log('Observable');
         this._isScalar = false;
         if (subscribe) {
             this._subscribe = subscribe;

@@ -15,6 +15,7 @@ export class SubjectSubscriber extends Subscriber {
 }
 export class Subject extends Observable {
     constructor() {
+        console.log('Subject');
         super();
         this.observers = [];
         this.closed = false;
