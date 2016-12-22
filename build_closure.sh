@@ -36,7 +36,8 @@ OPTS=(
   "--js_module_root=vendor"
 
   # Uncomment for easier debugging
-  # "--formatting=PRETTY_PRINT"
+  "--debug"
+  "--formatting=PRETTY_PRINT"
 
   ${ZONE}
   ${RJXS}
