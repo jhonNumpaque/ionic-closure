@@ -5,9 +5,8 @@ import { Http } from '@angular/http';
 import { UserData } from './user-data';
 
 import { Observable } from 'rxjs/Observable.js';
-import 'rxjs/add/operator/map.js';
-import 'rxjs/add/observable/of.js';
-
+import * as map from 'rxjs/add/operator/map';
+import * as of from 'rxjs/add/observable/of';
 
 @Injectable()
 export class ConferenceData {
