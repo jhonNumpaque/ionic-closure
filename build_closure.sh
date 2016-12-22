@@ -35,7 +35,7 @@ OPTS=(
   "--js_module_root=vendor"
 
   # Uncomment for easier debugging
-  "--formatting=PRETTY_PRINT"
+  # "--formatting=PRETTY_PRINT"
 
   ${ZONE}
   ${RJXS}
@@ -49,7 +49,7 @@ OPTS=(
 set -ex
 java -jar node_modules/google-closure-compiler/compiler.jar --js_output_file=dist/bundle.js $(echo ${OPTS[*]})
 gzip --keep -f dist/bundle.js
-java -jar node_modules/google-closure-compiler/compiler.jar --js_output_file=dist/bundle.debug.js --debug $(echo ${OPTS[*]})
+# java -jar node_modules/google-closure-compiler/compiler.jar --js_output_file=dist/bundle.debug.js --debug $(echo ${OPTS[*]})
 # requires brotli
 # on Mac: brew install brotli
 # bro --force --quality 10 --input dist/bundle.js --output dist/bundle.js.brotli
