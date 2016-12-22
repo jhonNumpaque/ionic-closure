@@ -22,7 +22,6 @@ OPTS=(
   "--language_in=ES6_STRICT"
   "--language_out=ES5"
   "--compilation_level=ADVANCED_OPTIMIZATIONS"
-  "--js_output_file=dist/bundle.js"
   "--create_source_map=%outname%.map"
   "--variable_renaming_report=dist/variable_renaming_report"
   "--property_renaming_report=dist/property_renaming_report"
@@ -36,7 +35,6 @@ OPTS=(
   "--js_module_root=vendor"
 
   # Uncomment for easier debugging
-  "--debug"
   "--formatting=PRETTY_PRINT"
 
   ${ZONE}
@@ -49,8 +47,9 @@ OPTS=(
 )
 
 set -ex
-java -jar node_modules/google-closure-compiler/compiler.jar $(echo ${OPTS[*]})
+java -jar node_modules/google-closure-compiler/compiler.jar --js_output_file=dist/bundle.js $(echo ${OPTS[*]})
 gzip --keep -f dist/bundle.js
+java -jar node_modules/google-closure-compiler/compiler.jar --js_output_file=dist/bundle.debug.js --debug $(echo ${OPTS[*]})
 # requires brotli
 # on Mac: brew install brotli
 # bro --force --quality 10 --input dist/bundle.js --output dist/bundle.js.brotli
