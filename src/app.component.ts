@@ -63,15 +63,16 @@ export class ConferenceApp {
     });
 
     // Check if the user has already seen the tutorial
-    this.userData.checkHasSeenTutorial().then((hasSeenTutorial) => {
-      if (hasSeenTutorial === null) {
-        // User has not seen tutorial
-        this.rootPage = TutorialPage;
-      } else {
-        // User has seen tutorial
-        this.rootPage = TabsPage;
-      }
-    });
+    // this.userData.checkHasSeenTutorial().then((hasSeenTutorial) => {
+    //   if (hasSeenTutorial === null) {
+    //     // User has not seen tutorial
+    //     this.rootPage = TutorialPage;
+    //   } else {
+    //     // User has seen tutorial
+    //     this.rootPage = TabsPage;
+    //   }
+    // });
+    this.rootPage = TutorialPage;
 
     // load the conference data
     confData.load();
