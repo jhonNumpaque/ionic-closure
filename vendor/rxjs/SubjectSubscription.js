@@ -8,7 +8,6 @@ export class SubjectSubscription extends Subscription {
      * @param {?} subscriber
      */
     constructor(subject, subscriber) {
-        console.log('SubjectSubscription');
         super();
         this.subject = subject;
         this.subscriber = subscriber;

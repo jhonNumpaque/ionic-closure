@@ -270,7 +270,6 @@ class InnerRefCountSubscription extends Subscription {
      * @param {?} parent
      */
     constructor(parent) {
-        console.log('InnerRefCountSubscription');
         super();
         this.parent = parent;
         parent.count++;
