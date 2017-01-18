@@ -23,11 +23,10 @@
   <!-- Ionic's root component and where the app will load -->
   <ion-app></ion-app>
 
-  <!-- The polyfills js is generated during the build process -->
-  <script src="build/polyfills.js"></script>
+  <script src="node_modules/zone.js/dist/zone.min.js"></script>
 
   <!-- The bundle js is generated during the build process -->
-  <script src="dist/bundle.js"></script>
+  <script src="dist/bundle.debug.js"></script>
 
   <!-- google maps script is loaded last as to not block rendering -->
   <script async defer src="https://maps.googleapis.com/maps/api/js"></script>

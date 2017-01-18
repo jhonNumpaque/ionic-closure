@@ -20,7 +20,7 @@
     "source-map-explorer": "^1.3.3",
     "tsickle": "^0.2.3",
     "typescript": "~2.0",
-    "zone.js": "angular/zone.js#2594817"
+    "zone.js": "0.7.5"
   },
   "scripts": {
     "build": "npm run clean && node ./ionic_build.js && ngc && ./build_closure.sh",

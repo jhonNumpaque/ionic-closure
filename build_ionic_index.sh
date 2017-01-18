@@ -45,6 +45,8 @@ OPTS=(
   ${IONIC_ANGULAR}
   #"--entry_point=./built/src/bootstrap"
   "--entry_point=./node_modules/ionic-angular/es2015/index.js"
+  "--dependency_mode=STRICT"
+  "--output_manifest ./dist/manifest.MF"
 )
 
 set -ex
