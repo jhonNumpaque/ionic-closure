@@ -37,20 +37,32 @@ OPTS=(
   # Uncomment for easier debugging
   # "--formatting=PRETTY_PRINT"
 
-  ${ZONE}
+  "vendor/zone_externs.js"
+
+  #${ZONE}
   ${RJXS}
   ${ANGULAR_INDEX}
   ${ANGULAR_SRC}
   ${GENERATED_BY_NGC}
   ${IONIC_ANGULAR}
   "--entry_point=./built/src/bootstrap"
+  "--dependency_mode=STRICT"
+  "--output_manifest ./dist/manifest.MF"
 )
 
 set -ex
 java -jar node_modules/google-closure-compiler/compiler.jar --js_output_file=dist/bundle.js $(echo ${OPTS[*]})
-gzip --keep -f dist/bundle.js
-# java -jar node_modules/google-closure-compiler/compiler.jar --js_output_file=dist/bundle.debug.js --debug $(echo ${OPTS[*]})
+java -jar node_modules/google-closure-compiler/compiler.jar --js_output_file=dist/bundle.debug.js --debug $(echo ${OPTS[*]})
 # requires brotli
 # on Mac: brew install brotli
 # bro --force --quality 10 --input dist/bundle.js --output dist/bundle.js.brotli
 ls -alH dist/bundle*
+
+# measure the sizes of scripts the user will need to load
+for script in dist/bundle.js node_modules/zone.js/dist/zone.min.js; do
+  gzip --keep -f $script
+  # requires brotli
+  # on Mac: brew install brotli
+  bro --force --quality 10 --input $script --output $script.brotli
+  ls -alH ${script}*
+done
