@@ -14,6 +14,8 @@
     "@angular/platform-server": "alexeagle/platform-server-builds",
     "@angular/tsc-wrapped": "alexeagle/tsc-wrapped-builds",
     "@types/node": "^7.0.0",
+    "babel-cli": "^6.22.2",
+    "babel-preset-env": "^1.1.8",
     "google-closure-compiler": "^20161201.0.0",
     "ionic-angular": "2.0.0-rc.5-201701192302",
     "rxjs": "5.0.0-rc.4",
@@ -24,10 +26,11 @@
   },
   "scripts": {
     "build": "npm run clean && node ./ionic_build.js && ngc && ./build_closure.sh",
-    "clean": "rm -rf dist && rm -rf built && find src -name *.ngfactory* -delete && find src -name *.ngsummary* -delete",
+    "ngc": "npm run clean && ngc",
+    "clean": "rm -rf dist && rm -rf out && rm -rf built && find src -name *.ngfactory* -delete && find src -name *.ngsummary* -delete && find src -name *.metadata.json* -delete && find src -name *.d.ts* -delete && find src -name *.js -delete",
     "explore": "source-map-explorer dist/bundle.js dist/bundle.js.map",
-    "prepublish": "./import_cleanup.sh",
-    "build-local-ionic": "./build_local_ionic.sh && ./import_cleanup.sh"
+    "build-local-ionic": "./build_local_ionic.sh && ./import_cleanup.sh",
+    "build-rxjs": "babel ./vendor/rxjs -d ./vendor/rxjs-cjs"
   },
   "author": "Alex Eagle <alexeagle@google.com> (https://angularjs.org/)",
   "license": "MIT"

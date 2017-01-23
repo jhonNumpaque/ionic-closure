@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Platform } from 'ionic-angular/es2015/index';
+import { Platform } from 'ionic-angular';
 
 import { HomePage } from './pages/home/home';
 

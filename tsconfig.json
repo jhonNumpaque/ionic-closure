@@ -4,7 +4,7 @@
         "annotateForClosureCompiler": true
     },
     "compilerOptions": {
-        "module": "es2015",
+        "module": "commonjs",
         "moduleResolution": "node",
         "target": "es6",
         "noImplicitAny": false,
