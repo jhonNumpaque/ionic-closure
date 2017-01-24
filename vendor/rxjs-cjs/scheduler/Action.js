@@ -38,7 +38,6 @@ var Action = exports.Action = function (_Subscription) {
   function Action(scheduler, work) {
     _classCallCheck(this, Action);
 
-    console.log('Action');
     return _possibleConstructorReturn(this, (Action.__proto__ || Object.getPrototypeOf(Action)).call(this));
   }
   /**

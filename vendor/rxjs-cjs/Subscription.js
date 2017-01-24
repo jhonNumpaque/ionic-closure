@@ -42,7 +42,6 @@ var Subscription = exports.Subscription = function () {
     function Subscription(unsubscribe) {
         _classCallCheck(this, Subscription);
 
-        console.log('Subscription');
         this.closed = false;
         if (unsubscribe) {
             this._unsubscribe = unsubscribe;

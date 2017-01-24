@@ -1,0 +1,24 @@
+"use strict";
+
+const core_1 = require('@angular/core');
+const ionic_angular_1 = require('ionic-angular');
+const home_1 = require('./pages/home/home');
+class MyApp {
+    constructor(platform) {
+        this.rootPage = home_1.HomePage;
+        platform.ready().then(() => {
+            // Okay, so the platform is ready and our plugins are available.
+            // Here you can do any higher level native things you might need.
+            console.log('platform ready fired');
+        });
+    }
+}
+MyApp.decorators = [{ type: core_1.Component, args: [{
+        template: `
+    <ion-nav [root]="rootPage"></ion-nav>
+  `
+    }] }];
+/** @nocollapse */
+MyApp.ctorParameters = [{ type: ionic_angular_1.Platform }];
+exports.MyApp = MyApp;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImFwcC5jb21wb25lbnQuanMiXSwibmFtZXMiOlsiY29yZV8xIiwicmVxdWlyZSIsImlvbmljX2FuZ3VsYXJfMSIsImhvbWVfMSIsIk15QXBwIiwiY29uc3RydWN0b3IiLCJwbGF0Zm9ybSIsInJvb3RQYWdlIiwiSG9tZVBhZ2UiLCJyZWFkeSIsInRoZW4iLCJjb25zb2xlIiwibG9nIiwiZGVjb3JhdG9ycyIsInR5cGUiLCJDb21wb25lbnQiLCJhcmdzIiwidGVtcGxhdGUiLCJjdG9yUGFyYW1ldGVycyIsIlBsYXRmb3JtIiwiZXhwb3J0cyJdLCJtYXBwaW5ncyI6IkFBQUE7O0FBQ0EsTUFBTUEsU0FBU0MsUUFBUSxlQUFSLENBQWY7QUFDQSxNQUFNQyxrQkFBa0JELFFBQVEsZUFBUixDQUF4QjtBQUNBLE1BQU1FLFNBQVNGLFFBQVEsbUJBQVIsQ0FBZjtBQUNBLE1BQU1HLEtBQU4sQ0FBWTtBQUNSQyxnQkFBWUMsUUFBWixFQUFzQjtBQUNsQixhQUFLQyxRQUFMLEdBQWdCSixPQUFPSyxRQUF2QjtBQUNBRixpQkFBU0csS0FBVCxHQUFpQkMsSUFBakIsQ0FBc0IsTUFBTTtBQUN4QjtBQUNBO0FBQ0FDLG9CQUFRQyxHQUFSLENBQVksc0JBQVo7QUFDSCxTQUpEO0FBS0g7QUFSTztBQVVaUixNQUFNUyxVQUFOLEdBQW1CLENBQ2YsRUFBRUMsTUFBTWQsT0FBT2UsU0FBZixFQUEwQkMsTUFBTSxDQUFDO0FBQ3JCQyxrQkFBVzs7O0FBRFUsS0FBRCxDQUFoQyxFQURlLENBQW5CO0FBT0E7QUFDQWIsTUFBTWMsY0FBTixHQUF1QixDQUNuQixFQUFFSixNQUFNWixnQkFBZ0JpQixRQUF4QixFQURtQixDQUF2QjtBQUdBQyxRQUFRaEIsS0FBUixHQUFnQkEsS0FBaEIiLCJmaWxlIjoiYXBwLmNvbXBvbmVudC5qcyIsInNvdXJjZXNDb250ZW50IjpbIlwidXNlIHN0cmljdFwiO1xuY29uc3QgY29yZV8xID0gcmVxdWlyZSgnQGFuZ3VsYXIvY29yZScpO1xuY29uc3QgaW9uaWNfYW5ndWxhcl8xID0gcmVxdWlyZSgnaW9uaWMtYW5ndWxhcicpO1xuY29uc3QgaG9tZV8xID0gcmVxdWlyZSgnLi9wYWdlcy9ob21lL2hvbWUnKTtcbmNsYXNzIE15QXBwIHtcbiAgICBjb25zdHJ1Y3RvcihwbGF0Zm9ybSkge1xuICAgICAgICB0aGlzLnJvb3RQYWdlID0gaG9tZV8xLkhvbWVQYWdlO1xuICAgICAgICBwbGF0Zm9ybS5yZWFkeSgpLnRoZW4oKCkgPT4ge1xuICAgICAgICAgICAgLy8gT2theSwgc28gdGhlIHBsYXRmb3JtIGlzIHJlYWR5IGFuZCBvdXIgcGx1Z2lucyBhcmUgYXZhaWxhYmxlLlxuICAgICAgICAgICAgLy8gSGVyZSB5b3UgY2FuIGRvIGFueSBoaWdoZXIgbGV2ZWwgbmF0aXZlIHRoaW5ncyB5b3UgbWlnaHQgbmVlZC5cbiAgICAgICAgICAgIGNvbnNvbGUubG9nKCdwbGF0Zm9ybSByZWFkeSBmaXJlZCcpO1xuICAgICAgICB9KTtcbiAgICB9XG59XG5NeUFwcC5kZWNvcmF0b3JzID0gW1xuICAgIHsgdHlwZTogY29yZV8xLkNvbXBvbmVudCwgYXJnczogW3tcbiAgICAgICAgICAgICAgICB0ZW1wbGF0ZTogYFxuICAgIDxpb24tbmF2IFtyb290XT1cInJvb3RQYWdlXCI+PC9pb24tbmF2PlxuICBgXG4gICAgICAgICAgICB9LF0gfSxcbl07XG4vKiogQG5vY29sbGFwc2UgKi9cbk15QXBwLmN0b3JQYXJhbWV0ZXJzID0gW1xuICAgIHsgdHlwZTogaW9uaWNfYW5ndWxhcl8xLlBsYXRmb3JtLCB9LFxuXTtcbmV4cG9ydHMuTXlBcHAgPSBNeUFwcDtcbiJdfQ==

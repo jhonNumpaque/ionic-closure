@@ -21,7 +21,6 @@ export class Subscription {
      * @param {?=} unsubscribe
      */
     constructor(unsubscribe) {
-        console.log('Subscription');
         this.closed = false;
         if (unsubscribe) {
             this._unsubscribe = unsubscribe;

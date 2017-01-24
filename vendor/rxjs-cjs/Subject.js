@@ -49,8 +49,6 @@ var Subject = exports.Subject = function (_Observable) {
     function Subject() {
         _classCallCheck(this, Subject);
 
-        console.log('Subject');
-
         var _this2 = _possibleConstructorReturn(this, (Subject.__proto__ || Object.getPrototypeOf(Subject)).call(this));
 
         _this2.observers = [];

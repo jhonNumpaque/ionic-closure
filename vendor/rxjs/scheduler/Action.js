@@ -18,7 +18,6 @@ export class Action extends Subscription {
      * @param {?} work
      */
     constructor(scheduler, work) {
-        console.log('Action');
         super();
     }
     /**

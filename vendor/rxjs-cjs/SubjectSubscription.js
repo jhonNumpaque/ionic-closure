@@ -28,8 +28,6 @@ var SubjectSubscription = exports.SubjectSubscription = function (_Subscription)
     function SubjectSubscription(subject, subscriber) {
         _classCallCheck(this, SubjectSubscription);
 
-        console.log('SubjectSubscription');
-
         var _this = _possibleConstructorReturn(this, (SubjectSubscription.__proto__ || Object.getPrototypeOf(SubjectSubscription)).call(this));
 
         _this.subject = subject;

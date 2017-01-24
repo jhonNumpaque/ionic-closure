@@ -30,7 +30,6 @@ var Observable = exports.Observable = function () {
     function Observable(subscribe) {
         _classCallCheck(this, Observable);
 
-        console.log('Observable');
         this._isScalar = false;
         if (subscribe) {
             this._subscribe = subscribe;
