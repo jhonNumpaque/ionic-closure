@@ -1,3 +1,15 @@
+## Instructions
+
+Run `npm install`
+Run `npm run build`
+Use a web server to serve the `index.html` file. I prefer `httpster` from `npm`.
+
+
+
+
+## Original Below
+
+
 This repo is a proof-of-concept for bunding an Angular application with Google Closure Compiler.
 It contains a minimal Hello World application with a single component.
 
