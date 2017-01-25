@@ -10,6 +10,8 @@ export class SupportPage {
 
   submitted: boolean = false;
   supportMessage: string;
+  supportQuestion: any;
+  submitForm: any;
 
   constructor(
     public navCtrl: NavController,
