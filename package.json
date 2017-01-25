@@ -24,6 +24,7 @@
   },
   "scripts": {
     "build": "npm run clean && node ./ionic_build.js && ngc && ./build_closure.sh",
+    "build-ionic-index": "npm run clean && node ./ionic_build.js && ngc && ./build_ionic_index.sh",
     "clean": "rm -rf dist && rm -rf built && find src -name *.ngfactory* -delete && find src -name *.ngsummary* -delete",
     "explore": "source-map-explorer dist/bundle.js dist/bundle.js.map",
     "prepublish": "./import_cleanup.sh",
